@@ -2,6 +2,7 @@
 import HomeClient from "@/components/HomeClient";
 import { CarsCardProps } from "@/types/car";
 import carsData from "@/data/cars.json";
+import { Suspense } from "react";
 
 
 // async function getCars() : Promise<CarsCardProps[]> {
@@ -15,8 +16,9 @@ export default async function Home() {
 
   return (
     <>
-      <HomeClient cars={cars}/>
-      
+      <Suspense fallback={<div className="text-center py-10">Loading catalog...</div>}>
+        <HomeClient cars={cars}/>
+      </Suspense>
     </>
   );
 }

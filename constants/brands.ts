@@ -1,0 +1,17 @@
+export const BRANDS_DATA = [
+    {car_brand: "Lamborghini", logo: "/car_brands/lamborghini_logo.png"},
+    {car_brand: "Ferrari", logo: "/car_brands/ferrari_logo.png"},
+    {car_brand: "Mercedes-Benz", logo: "/car_brands/mercedes_logo.png"},
+    {car_brand: "McLaren", logo: "/car_brands/mclaren_logo.png"},
+    {car_brand: "Lotus", logo: "/car_brands/lotus_logo.png"},
+    {car_brand: "Porsche", logo: "/car_brands/porsche_logo.png"},
+    {car_brand: "Bugatti", logo: "/car_brands/bugatti_logo.png"},
+    {car_brand: "Rolls Royce", logo: "/car_brands/rr_logo.png"},
+    {car_brand: "Koenigsegg", logo: "/car_brands/koenigsegg_logo.png"},
+    {car_brand: "Aston Martin", logo: "/car_brands/aston_martin_logo.png"},
+    {car_brand: "BMW", logo: "/car_brands/bmw_logo.png"},
+    {car_brand: "Pagani", logo: "/car_brands/pagani_logo.png"},
+    {car_brand: "Ford", logo: "/car_brands/ford_logo.png"},
+    {car_brand: "Maserati", logo: "/car_brands/maserati_logo.png"},
+    {car_brand: "SSC", logo: "/car_brands/ssc_logo.png"},
+]

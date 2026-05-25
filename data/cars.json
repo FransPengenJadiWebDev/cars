@@ -1,0 +1,328 @@
+[
+    {
+        "id": 1,
+        "name": "AMG One 2023",
+        "brand": "Mercedes-Benz",
+        "images": [
+            "/cars/amgone/AmgOne1.jpg",
+            "/cars/amgone/AmgOne2.jpg",
+            "/cars/amgone/AmgOne3.jpg", 
+            "/cars/amgone/AmgOne4.jpg",
+            "/cars/amgone/AmgOne5.jpg",
+            "/cars/amgone/AmgOne6.jpg",
+            "/cars/amgone/AmgOne7.jpg",
+            "/cars/amgone/AmgOne8.jpg",
+            "/cars/amgone/AmgOne9.jpg",
+            "/cars/amgone/AmgOne10.jpg"
+        ],
+        "category": "hypercar",
+        "price": 3675970,
+        "year": 2023,
+        "warranty": false,
+        "odo": 0,
+        "desc_title": "Mercedes-Benz AMG One",
+        "desc": [
+            "Limited to just 275 units worldwide, the Mercedes-Benz AMG ONE is a truly exceptional hypercar that brings the thrill of Formula One racing to the streets. With its E PERFORMANCE hybrid drive and cutting-edge motorsport technology, the ONE is capable of delivering an unparalleled driving experience.",
+            "At the heart of the ONE is a complex hybrid powertrain that combines a 1.6-liter turbocharged V6 engine with four electric motors. The result is a staggering 1,063 horsepower, propelling the ONE from 0 to 60 mph in just 2.9 seconds and on to a top speed of over 217 mph.",
+            "Carbon Fiber Monocoque for Maximum Strength and Agility",
+            "The ONE's carbon-fiber monocoque provides a lightweight and incredibly rigid structure, ensuring exceptional handling and cornering performance. The carbon-fiber body panels further enhance the car's aerodynamic efficiency, reducing drag and improving downforce.",
+            "Active Aerodynamics for Optimal Performance",
+            "The ONE's active aerodynamics system adjusts the car's front and rear wings in real time, optimizing downforce and reducing drag based on driving conditions. This system helps the ONE achieve maximum performance on the track and enhanced stability on the road.",
+            "Limited Availability and High Demand",
+            "With only 275 units produced, the Mercedes-Benz AMG ONE is a highly sought-after vehicle. Demand for the ONE far exceeds supply, making it one of the most exclusive hypercars in the world.",
+            "Overall, the Mercedes-Benz AMG ONE is a true engineering marvel that represents the pinnacle of automotive performance. With its cutting-edge technology, exceptional performance, and limited availability, the ONE is sure to become a legend among car enthusiasts."
+        ],
+        "source": "https://www.mercedes-amg.com/en/amg-one",
+        "sourcea": "Mercedes AMG",
+        "spec": {
+            "engine": "1.6L V6 Twin-Turbocharged + 4 eMotors",
+            "hp": 1063,
+            "top_speed": 352,
+            "transmision": "7 Speed Automated Manual Gearbox",
+            "body": "Coupe",
+            "exterior": "Black",
+            "interior": "Black"
+        }        
+    },
+    {
+        "id": 2,
+        "name": "812 Competizione Aperta 2024",
+        "brand": "Ferrari",
+        "images": [
+            "/cars/812/8121.jpg",
+            "/cars/812/8122.jpg",
+            "/cars/812/8123.jpg", 
+            "/cars/812/8124.jpg",
+            "/cars/812/8125.jpg",
+            "/cars/812/8126.jpg",
+            "/cars/812/8127.jpg",
+            "/cars/812/8128.jpg",
+            "/cars/812/8129.jpg",
+            "/cars/812/81210.jpg"
+        ],
+        "category": "supercar",
+        "price": 2232811,
+        "year": 2024,
+        "warranty": false,
+        "odo": 0,
+        "desc_title": "Ferrari 812 Competizione Aperta",
+        "desc": [
+            "The Ferrari 812 Competizione Aperta is not just a car—it’s a celebration of Ferrari’s purest DNA. Designed for those who crave raw, unfiltered performance, this open-top icon blends extreme engineering with bespoke artistry.",
+            "Finished in the stunning Matte Grigio Silverstone, this example is elevated with a striking Nero special livery and a sleek Italian tricolore motif, giving it an unmistakable presence. Extensive use of carbon fiber—from the engine covers to the rear diffuser and air intakes—enhances both performance and visual aggression, while details like the matte black Cavallino emblem and yellow brake calipers add signature Ferrari flair.",
+            "Inside, the cockpit is a seamless fusion of racing inspiration and luxury. Carbon fibre accents dominate the cabin, complemented by Daytona racing seats, a yellow rev counter, and elegant Nero Giallo contrast stitching. The bespoke Dreamline detailing across the steering wheel and F1 paddles further highlights the car’s tailor-made craftsmanship.",
+            "At its heart lies a naturally aspirated 6.5L V12, producing an exhilarating 819 horsepower and 692 Nm of torque. Paired with a 7-speed transmission and rear-wheel drive, it rockets from 0 to 100 km/h in just 2.85 seconds, delivering a top speed of 340 km/h—a true testament to Ferrari’s engineering excellence. Equipped with a high-power Hi-Fi system and a fully custom specification package, this Competizione Aperta offers an experience that is as exclusive as it is thrilling."
+        ],
+        "source": "",
+        "sourcea": "",
+        "spec": {
+            "engine": "6.5L V12 Naturally Aspirated Engine",
+            "hp": 819,
+            "top_speed": 340,
+            "transmision": "7 Speed Automatic Transmision",
+            "body": "Convertible",
+            "exterior": "Matte Grigio Silverstone",
+            "interior": "Black"
+        }        
+    },
+    {
+        "id": 3,
+        "name": "Purosangue 2025",
+        "brand": "Ferrari",
+        "images": [
+            "/cars/purosangue/Purosangue1.jpg",
+            "/cars/purosangue/Purosangue2.jpg",
+            "/cars/purosangue/Purosangue3.jpg", 
+            "/cars/purosangue/Purosangue4.jpg",
+            "/cars/purosangue/Purosangue5.jpg",
+            "/cars/purosangue/Purosangue6.jpg",
+            "/cars/purosangue/Purosangue7.jpg",
+            "/cars/purosangue/Purosangue8.jpg",
+            "/cars/purosangue/Purosangue9.jpg",
+            "/cars/purosangue/Purosangue10.jpg"
+        ],
+        "category": "luxury suv",
+        "price": 667119,
+        "year": 2025,
+        "warranty": false,
+        "odo": 4039,
+        "desc_title": "Ferrari Purosangue",
+        "desc": [
+            "The Ferrari Purosangue marks a new chapter for Ferrari—blending the brand’s legendary V12 performance with the practicality and presence of a four-door grand tourer.",
+            "Finished in the timeless Grigio Silverstone, this Purosangue is enhanced with an extensive range of carbon fibre elements, including wheelhouse flares, front spoilers, rear diffuser, and underdoor covers—adding both visual aggression and lightweight performance. Matte black forged diamond-polished wheels, yellow brake calipers, and titanium wheel bolts complete its commanding stance, while advanced features such as active matrix LED headlights and a surround view system ensure cutting-edge functionality.",
+            "Inside, the cabin is a perfect balance of luxury and sportiness. Upholstered in elegant Tortora leather and Alcantara, complemented by Nero Alcantara accents and Giallo detailing, the interior reflects Ferrari’s signature craftsmanship. The carbon fibre steering wheel with integrated LEDs, heated functionality, and digital rear-view mirror create a driver-focused environment, while rear seat heating and ventilation, massage front seats, and a high-end audio system ensure exceptional comfort for every passenger.",
+            "Powered by a naturally aspirated 6.5L V12 engine, producing 715 horsepower and 716 Nm of torque, the Purosangue delivers exhilarating performance through an 8-speed transmission and all-wheel-drive system. Accelerating from 0 to 100 km/h in just 3.3 seconds and exceeding 310 km/h, it offers a driving experience unlike any other in its class. With features such as a front suspension lift system, wireless smartphone charging, Apple CarPlay, and MyFerrari Connect readiness, this Purosangue seamlessly combines everyday usability with pure Ferrari performance."
+        ],
+        "source": "",
+        "sourcea": "",
+        "spec": {
+            "engine": "6.5L V12 Naturally Aspirated Engine",
+            "hp": 715,
+            "top_speed": 310,
+            "transmision": "8 Speed Automatic Transmision",
+            "body": "SUV",
+            "exterior": "Grigio Silverstone",
+            "interior": "Tortora"
+        }        
+    },
+    {
+        "id": 4,
+        "name": "Aventador Ultimae 2022",
+        "brand": "Lamborghini",
+        "images": [
+            "/cars/aventador/Aventador1.jpg",
+            "/cars/aventador/Aventador2.jpg",
+            "/cars/aventador/Aventador3.jpg", 
+            "/cars/aventador/Aventador4.jpg",
+            "/cars/aventador/Aventador5.jpg",
+            "/cars/aventador/Aventador6.jpg",
+            "/cars/aventador/Aventador7.jpg",
+            "/cars/aventador/Aventador8.jpg",
+            "/cars/aventador/Aventador9.jpg",
+            "/cars/aventador/Aventador10.jpg"
+        ],
+        "category": "supercar",
+        "price": 585431,
+        "year": 2022,
+        "warranty": false,
+        "odo": 1020,
+        "desc_title": "Lamborghini Aventador Ultimae: 1 of 350 Units",
+        "desc": [
+            "The 2022 Lamborghini Aventador Ultimae is a fitting swan song for a legendary nameplate. This limited-edition hypercar serves as the final iteration of the iconic Aventador, boasting the most potent naturally-aspirated V12 engine Lamborghini has ever produced.",
+            "The Aventador Ultimae retains the aggressive yet elegant design language that has become synonymous with the Aventador. The sharp angles, pronounced air intakes, and massive rear wing all contribute to its undeniable presence. This final iteration is offered exclusively in coupe and roadster body styles, both featuring a lightweight carbon fiber monocoque for exceptional strength and rigidity.",
+            "The interior of the Aventador Ultimae blends luxury with motorsport-inspired touches. High-quality materials like leather and Alcantara are found throughout the cabin, while the lightweight seats offer ample support and comfort. The driver-centric cockpit boasts a fully digital instrument cluster and a central infotainment system that provides access to various vehicle functions.",
+            "Only 350 of the Aventador Ultimae were produced, making it an incredibly rare and collectible car. This exclusivity further enhances its appeal for collectors and enthusiasts alike.",
+            "Only 350 of the Aventador Ultimae were produced, making it an incredibly rare and collectible car. This exclusivity further enhances its appeal for collectors and enthusiasts alike."
+        ],
+        "source": "https://www.lamborghini.com/en-en/history/aventador-lp-780-4-ultimae",
+        "sourcea": "Lamborghini",
+        "spec": {
+            "engine": "6.5L V12 Naturally Aspirated Engine",
+            "hp": 780,
+            "top_speed": 355,
+            "transmision": "7 Speed Automatic Transmision",
+            "body": "Coupe",
+            "exterior": "Red",
+            "interior": "Black"
+        }        
+    },
+    {
+        "id": 5,
+        "name": "Senna 2019",
+        "brand": "McLaren",
+        "images": [
+            "/cars/senna/Senna1.jpg",
+            "/cars/senna/Senna2.jpg",
+            "/cars/senna/Senna3.jpg", 
+            "/cars/senna/Senna4.jpg",
+            "/cars/senna/Senna5.jpg",
+            "/cars/senna/Senna6.jpg",
+            "/cars/senna/Senna7.jpg",
+            "/cars/senna/Senna8.jpg",
+            "/cars/senna/Senna9.jpg",
+            "/cars/senna/Senna10.jpg"
+        ],
+        "category": "hypercar",
+        "price": 1170863,
+        "year": 2019,
+        "warranty": false,
+        "odo": 0,
+        "desc_title": "McLaren Senna",
+        "desc": [
+            "Inspired by the legendary Ayrton Senna, the McLaren Senna is a limited-edition track car that embodies the spirit of racing excellence. With only 500 units produced, this extraordinary machine is designed for those who demand the ultimate driving experience on both the track and the road. Every aspect of the Senna is meticulously crafted to unleash the driver’s full potential, making it a true masterpiece of automotive engineering.",
+            "The Senna boasts cutting-edge active aerodynamics, generating extreme levels of downforce that enhance stability and cornering prowess at high speeds. Its lightweight construction is achieved through the use of the innovative MonoCage III chassis, which incorporates a double-walled carbon fiber upper rear structure, making it the lightest McLaren since the iconic F1. This focus on weight reduction not only improves acceleration but also enhances overall performance, allowing drivers to push their limits like never before.",
+            "At the heart of the Senna lies a formidable 4.0L V8 twin-turbo engine, delivering a staggering 789 horsepower and 800 Nm of torque. This power is seamlessly channeled to the rear wheels via a 7-speed automatic transmission, propelling the Senna to a blistering top speed of 335 km/h. It’s not just quick; it’s insanely fast, offering an exhilarating driving experience that few can match.",
+            "Beyond its impressive specifications, the McLaren Senna is a work of art. Its striking design, defined by aerodynamic lines and intricate carbon fiber details, is a testament to McLaren’s commitment to performance and aesthetics. The Senna is not just a car; it’s an embodiment of a racing legacy, crafted for those who seek the extraordinary. Experience the McLaren Senna and unleash the driver within."
+        ],
+        "source": "https://cars.mclaren.com/gl_en/ultimate-models/mclaren-senna",
+        "sourcea": "McLaren",
+        "spec": {
+            "engine": "4.0L V8 Twin-Turbocharged Engine",
+            "hp": 789,
+            "top_speed": 335,
+            "transmision": "7 Speed Automatic Transmision",
+            "body": "Coupe",
+            "exterior": "White",
+            "interior": "Black"
+        }        
+    },
+    {
+        "id": 6,
+        "name": "Jesko Attack 2024",
+        "brand": "Koenigsegg",
+        "images": [
+            "/cars/jesko/Jesko1.jpg",
+            "/cars/jesko/Jesko2.jpg",
+            "/cars/jesko/Jesko3.jpg", 
+            "/cars/jesko/Jesko4.jpg",
+            "/cars/jesko/Jesko5.jpg",
+            "/cars/jesko/Jesko6.jpg",
+            "/cars/jesko/Jesko7.jpg",
+            "/cars/jesko/Jesko8.jpg",
+            "/cars/jesko/Jesko9.jpg",
+            "/cars/jesko/Jesko10.jpg"
+        ],
+        "category":"hypercar",
+        "price": 5718176,
+        "year": 2024,
+        "warranty": true,
+        "odo": 0,
+        "desc_title": "Koenigsegg Jesko Attack",
+        "desc": [
+            "The Koenigsegg Jesko Attack is engineered to push the limits of speed, aerodynamics, and precision. Finished in a full exposed carbon fiber body, this masterpiece combines raw aggression with lightweight engineering, this Jesko is backed by a 3 Year Warranty.",
+            "Mounted behind the cockpit is Koenigsegg’s redesigned 5.0 litre twin-turbo V8, an engine engineered to thrive at extreme RPM while still delivering brutal low-end torque. Producing 1280 horsepower on standard fuel and up to 1600 horsepower on E85 biofuel, the Jesko Attack delivers its power through the revolutionary 9-speed Light Speed Transmission (LST) — a gearbox so advanced it can skip directly between gears instantly, something traditional dual-clutch systems simply cannot replicate. The result is an acceleration experience that feels almost unreal, as if the car predicts your next move before you make it.",
+            "What truly separates the Jesko Attack from the hypercar crowd is its aerodynamic philosophy. This is not a car shaped for attention — it is shaped by airflow itself. Massive rear wings, deep air channels, active aero systems, and an aggressive track-focused setup allow it to generate up to 1400 kg of downforce, transforming the car into a precision instrument at speed. Every detail serves a purpose, from cooling the twin-turbo V8 under extreme load to keeping the chassis stable deep into triple-digit speeds. It is the kind of machine that reminds enthusiasts why analog emotion and futuristic engineering can still exist together in one breathtaking package."
+        ],
+        "source": "",
+        "sourcea": "",
+        "spec": {
+            "engine": "5.0L V8 Twin-Turbocharged Engine",
+            "hp": 1600,
+            "top_speed": 480,
+            "transmision": "9 Speed Light Speed Transmission (LST)",
+            "body": "Convertible",
+            "exterior": "Black",
+            "interior": "Black"
+        }        
+    },
+    {
+        "id": 7,
+        "name": "Chiron Super Sport 2023",
+        "brand": "Bugatti",
+        "images": [
+            "/cars/chiron/Chiron1.jpg",
+            "/cars/chiron/Chiron2.jpg",
+            "/cars/chiron/Chiron3.jpg", 
+            "/cars/chiron/Chiron4.jpg",
+            "/cars/chiron/Chiron5.jpg",
+            "/cars/chiron/Chiron6.jpg",
+            "/cars/chiron/Chiron7.jpg",
+            "/cars/chiron/Chiron8.jpg",
+            "/cars/chiron/Chiron9.jpg",
+            "/cars/chiron/Chiron10.jpg"
+        ],
+        "category":"hypercar",
+        "price": 5623856,
+        "year": 2023,
+        "warranty": false,
+        "odo": 4900,
+        "desc_title": "Bugatti Chiron Super Sport",
+        "desc": [
+            "The Bugatti Chiron Super Sport is a rare fusion of power, speed, and aerodynamic mastery — all wrapped in a shell of unmatched comfort and elegance. This refined machine isn’t just about brute force; it’s about the perfect balance of performance and luxury.",
+            "At the core of its design lies the iconic longtail silhouette, the stylistic heart and soul of the Chiron Super Sport. Sculpted for speed, this streamlined profile reduces aerodynamic stall and perfectly reflects Bugatti’s guiding philosophy: form follows performance. From every angle, it's a car that looks fast — because it is.",
+            "But beyond the technical brilliance lies the true heart of the car — the legendary 8.0-liter W16 engine. It delivers not only unmatched power and control, but also a feeling that’s hard to put into words. It’s not just fast. It’s emotional, exhilarating, and undeniably encouraging.",
+            "This one-of-a-kind spec, finished in deep Viola Aletheia with a bold bright red interior, is 1 of 1 in the world — as rare as it is breathtaking."
+        ],
+        "source": "https://www.bugatti.com/en/models/chiron-super-sport",
+        "sourcea": "Bugatti chiron super sport",
+        "spec": {
+            "engine": "8.0L W16 Quad-Turbocharged Engine",
+            "hp": 1600,
+            "top_speed": 440,
+            "transmision": "7 Speed Dual-Clutch Transmission",
+            "body": "Coupe",
+            "exterior": "Special Order-Viola Aletheia",
+            "interior": "Red"
+        }        
+    },
+    {
+        "id": 8,
+        "name": "Chiron Super Sport 300+ 2022",
+        "brand": "Bugatti",
+        "images": [
+            "/cars/chiron2/Chironn1.jpg",
+            "/cars/chiron2/Chironn2.jpg",
+            "/cars/chiron2/Chironn3.jpg", 
+            "/cars/chiron2/Chironn4.jpg",
+            "/cars/chiron2/Chironn5.jpg",
+            "/cars/chiron2/Chironn6.jpg",
+            "/cars/chiron2/Chironn7.jpg",
+            "/cars/chiron2/Chironn8.jpg",
+            "/cars/chiron2/Chironn9.jpg",
+            "/cars/chiron2/Chironn10.jpg"
+        ],
+        "category":"hypercar",
+        "price": 4829347,
+        "year": 2022,
+        "warranty": false,
+        "odo": 850,
+        "desc_title": "Bugatti Chiron Super Sport 300+",
+        "desc": [
+            "Welcome to the realm of automotive hyperbole, where the laws of physics seem to bend and the very definition of speed takes on a new meaning. We stand before the Bugatti Chiron Super Sport 300+, a machine not merely an automobile but a testament to the insatiable pursuit of automotive excellence.",
+            "The heart of this beast has a 1,600 horsepower, quad-turbocharged 8.0-liter W16 engine. Every detail, from the reinforced pistons to the bespoke turbochargers, is created for one singular purpose: velocity.",
+            "Mere horsepower is but one thing of the 300+ equation. Every curve, every line of its sculpted carbon fiber body is put to dance with the air. The tail, the aggressive diffusers, the aerodynamically optimized wheels – all conspire to generate downforce, pinning this land rocket to the asphalt even as it approaches the sound barrier.",
+            "The interior is dominated by black carbon, leather, and Alcantara in 'Beluga Black', and complemented by color highlights in 'Jet Orange.' Exclusive lettering radiates in this orange across carbon door sills, headrests, the knee support in the center console, and the fine double-stitched seams.",
+            "Only 30 Bugatti Chiron Super Sport 300+ were ever crafted, each a bespoke testament to the marque's unparalleled engineering prowess. "
+        ],
+        "source": "https://www.bugatti.com/en/models/chiron-super-sport-300",
+        "sourcea": "Bugatti",
+        "spec": {
+            "engine": "8.0L W16 Quad-Turbocharged Engine",
+            "hp": 1600,
+            "top_speed": 440,
+            "transmision": "7 Speed Automatic Transmision",
+            "body": "Coupe",
+            "exterior": "Black / Orange",
+            "interior": "Black"
+        }        
+    }
+]

@@ -1,10 +1,10 @@
 'use client'
 
 import {useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { MdSearch } from "react-icons/md";
 
-const SearchBar = () => {
+const SearchBarA = () => {
 
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -42,4 +42,10 @@ const SearchBar = () => {
   )
 }
 
-export default SearchBar
+export default function SearchBar() {
+  return (
+    <Suspense fallback={<div className="opacity-50">Loading Search...</div>}>
+      <SearchBarA/>
+    </Suspense>
+  )
+}

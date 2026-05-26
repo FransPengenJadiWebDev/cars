@@ -3,25 +3,18 @@
 import CarDescCard from "@/components/CarDescCard";
 import CarCarousel from "@/components/Carousel";
 import SpecsCard from "@/components/SpecsCard";
+import cars from "@/data/cars.json";
 
 type Props = {
   params: Promise<{ id: string }>;
 };
 
-async function getCarData(id: string) {
-  const res = await fetch(`http://localhost:3000/api/cars/${id}`, {
-    next: { revalidate: 60 }
-  });
-
-  if (!res.ok) return null;
-  return res.json();
-}
 
 
 export default async function CarDetailPage({ params }: Props) {
   const { id } = await params;
   
-  const car = await getCarData(id);
+  const car = cars.find((item: any) => item.id.toString() === id);
 
   if (!car) {
     return <div className="text-white">Mobil tidak ditemukan</div>;

@@ -18,18 +18,14 @@ const AboutPage = () => {
   return (
     <main className="bg-neutral-950 text-white min-h-screen overflow-hidden">
       
-      <section className="relative h-[60vh] flex items-center justify-center border-b border-neutral-900">
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-900/50 via-neutral-950 to-neutral-950" />
-        
-        <div className="absolute inset-y-0 left-1/4 w-[1px] bg-neutral-900/40 hidden md:block"></div>
-        <div className="absolute inset-y-0 right-1/4 w-[1px] bg-neutral-900/40 hidden md:block"></div>
+      <section className="relative py-30 lg:py-40 flex items-center justify-center border-b border-neutral-900">        
 
-        <div className="relative z-10 text-center max-w-4xl px-6">
-          <span className="text-[10px] md:text-xs uppercase tracking-widest text-orange-500 font-bold"
+        <div className="relative z-10 text-center max-w-4xl px-4">
+          <span className="lg:text-sm text-xs uppercase tracking-widest text-orange-500 font-bold"
           >
             The Heritage of Excellence
           </span>
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mt-3 uppercase"
+          <h1 className="text-4xl lg:text-6xl font-bold tracking-tight mt-3 uppercase"
           >
             CURATING AUTOMOTIVE <br />
             <span className="text-neutral-500 font-light italic">Masterpieces</span>
@@ -72,8 +68,6 @@ const AboutPage = () => {
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700 ease-out"
             />
-
-            <div className="absolute inset-0 bg-gradient-to-t from-neutral-800 via-transparent to-neutral-800/50" />
             
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 z-10">
               <span className="font-mono text-[10px] tracking-[0.3em] text-neutral-400 uppercase group-hover:text-white transition-colors duration-300">

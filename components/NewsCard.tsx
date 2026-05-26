@@ -14,12 +14,12 @@ const NewsCard = ({post, layout} : Props) => {
     <Link 
         href='/news'
         key={post.id} 
-        className={`h-[350px] lg:h-full group flex ${layout} bg-neutral-950 border border-neutral-900 rounded-xl overflow-hidden hover:border-orange-500/20 transition-all duration-300`}
+        className={`lg:h-full ${layout} group flex ${layout === 'flex-col' ? 'h-[350px]' : 'h-full'} bg-neutral-950 border border-neutral-900 rounded-xl overflow-hidden hover:border-orange-500/20 transition-all duration-300`}
     >
-        <div className='flex-1 relative lg:w-full  bg-neutral-900'>
+        <div className={`${layout === 'flex-row' ? 'flex-3' : 'flex-1'} relative lg:w-full  bg-neutral-900`}>
             <Image src={post.image} alt={post.title} fill className='object-cover group-hover:scale-105 transition-all duration-700'/>
         </div>
-        <div className='flex-1 p-5 flex flex-col gap-2 lg:gap-3'>
+        <div className={`${layout === 'flex-row' ? 'flex-2' : 'flex-1'} p-4 lg:p-5 flex flex-col gap-2 lg:gap-3`}>
             <div className='flex items-center gap-2 text-[10px] lg:text-[12px] tracking-wider uppercase text-neutral-500'>
                 <span className='text-orange-500 font-semibold'>{post.category}</span>
             </div>

@@ -37,7 +37,7 @@ const Sidebar = ({ isOpen, onClose,  }: any) => {
         </div>
 
         <div className="mb-6">
-          {/* <SearchBar search={search} setSearch={setSearch}/> */}
+          <SearchBar/>
         </div>
         
         <div className="my-6 border-b border-neutral-900"></div>
@@ -62,7 +62,7 @@ const Sidebar = ({ isOpen, onClose,  }: any) => {
 
         <div className="my-6 border-b border-neutral-900"></div>
           {status === "authenticated" ? (
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col justify-center gap-4">
               <span className="text-xs font-mono text-orange-500">[ {session.user?.name} ]</span>
               <button onClick={() => signOut()} className="flex flex-row items-center gap-1 text-xs uppercase tracking-wider text-neutral-400 hover:text-white">
                 <PiSignOutBold/>
@@ -100,7 +100,6 @@ const Sidebar = ({ isOpen, onClose,  }: any) => {
 
         <div className="my-6 border-b border-neutral-900"></div>
 
-        {/* SECTION 4: LuxDrive Briefing / Newsletter Widget (Dari Gambar 1) */}
         <div className="bg-neutral-900/40 border border-neutral-900 rounded-xl p-4 flex flex-col gap-3">
           <div>
             <h4 className="text-xs font-bold text-white uppercase tracking-wider">LuxDrive Briefing</h4>

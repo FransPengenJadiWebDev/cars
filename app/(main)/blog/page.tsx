@@ -20,18 +20,18 @@ const BlogPage = () => {
     const regularPosts = filteredPosts.filter(post => activeCategory !== "All Stories" || !post.featured)
 
     return (
-        <div className='px-7 w-full mt-32 mb-40 text-white max-w-7xl mx-auto'>
+        <div className='px-4 lg:px-7 w-full my-20 lg:my-0 lg:mt-32 lg:mb-40 text-white max-w-7xl mx-auto'>
             <div className='mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6'>
                 <div className='flex flex-col gap-2 max-w-2xl'>
-                    <h2 className='font-bold text-orange-500 uppercase text-xs tracking-[0.3rem]'>LuxDrive Journal</h2>
-                    <h1 className='text-white font-bold text-5xl leading-tight tracking-tight'>The Automotive Insights</h1>
-                    <p className='leading-relaxed text-gray-400 text-base'>
+                    <h2 className='font-bold text-orange-500 uppercase text-xs lg:text-sm tracking-[0.3rem]'>LuxDrive Journal</h2>
+                    <h1 className='text-white font-bold text-3xl lg:text-5xl leading-tight tracking-tight'>The Automotive Insights</h1>
+                    <p className='leading-relaxed text-gray-400 text-sm lg:text-base'>
                         Stay updated with exclusive reviews, deep engineering analysis, and the latest trends from the global hypercar ecosystem.
                     </p>
                 </div>
             </div>
 
-            <div className='flex flex-wrap gap-2 border-b border-neutral-900 pb-6 mb-12'>
+            <div className='flex flex-wrap gap-2 border-b border-neutral-900 pb-6 lg:mb-12'>
                 {CATEGORIES.map((cat, idx) => (
                     <button
                         key={idx}
@@ -47,7 +47,7 @@ const BlogPage = () => {
             </div>
 
             {activeCategory === "All Stories" && featuredPost && (
-                <Link href='/blog' className='group grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 items-center bg-neutral-900/20 border border-neutral-900 rounded-2xl p-6 hover:border-orange-500/20 transition-all duration-500'>
+                <Link href='/blog' className='group grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 items-center bg-neutral-900/20 border border-neutral-900 rounded-2xl p-2 lg:p-6 hover:border-orange-500/20 transition-all duration-500'>
                     <div className='lg:col-span-7 relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-neutral-900'>
                         <Image 
                             src={featuredPost.image} 
@@ -62,7 +62,7 @@ const BlogPage = () => {
                             <span>•</span>
                             <span>{featuredPost.date}</span>
                         </div>
-                        <h2 className='text-2xl lg:text-3xl font-bold leading-tight text-white group-hover:text-orange-500 transition-colors duration-300'>
+                        <h2 className='text-xl lg:text-3xl font-bold leading-tight text-white group-hover:text-orange-500 transition-colors duration-300'>
                             {featuredPost.title}
                         </h2>
                         <p className='text-neutral-400 text-sm leading-relaxed'>

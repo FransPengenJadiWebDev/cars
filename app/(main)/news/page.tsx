@@ -30,13 +30,13 @@ const BlogPage = () => {
     const breakingNews = NEWS_ITEMS.find(post => post.isBreaking)
 
     return (
-        <div className='px-4 w-full mt-32 mb-40 text-white max-w-7xl mx-auto'>
+        <div className='px-4 w-full my-20 lg:my-0 lg:mt-32 lg:mb-40 text-white max-w-7xl mx-auto'>
 
             <div className='mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6'>
-                <div className='mb-12 flex flex-col gap-2'>
-                    <h2 className='font-bold text-orange-500 uppercase text-xs tracking-[0.3rem]'>LuxDrive Intelligence</h2>
-                    <h1 className='text-white font-bold text-5xl leading-tight tracking-tight'>Global Newsroom</h1>
-                    <p className='leading-relaxed text-gray-400 text-base max-w-xl'>
+                <div className='lg:mb-12 flex flex-col gap-2'>
+                    <h2 className='font-bold text-orange-500 uppercase text-xs lg:text-sm tracking-[0.3rem]'>LuxDrive Intelligence</h2>
+                    <h1 className='text-white font-bold text-3xl lg:text-5xl leading-tight tracking-tight'>Global Newsroom</h1>
+                    <p className='leading-relaxed text-gray-400 text-sm lg:text-base max-w-xl'>
                         Real-time updates, market statistics, industry shifts, and insider automotive dispatches.
                     </p>
                 </div>
@@ -45,7 +45,7 @@ const BlogPage = () => {
             <div className='flex lg:flex-row flex-col mb-16 gap-5'>
                 {breakingNews && 
                     (
-                        <Link href={`/news`} className='group flex flex-col gap-8  bg-neutral-900/20 border border-neutral-900 rounded-2xl p-6 hover:border-orange-500/20 transition-all duration-500'>
+                        <Link href={`/news`} className='group flex flex-col gap-8  bg-neutral-900/20 border border-neutral-900 rounded-2xl p-2 lg:p-6 hover:border-orange-500/20 transition-all duration-500'>
                             <div className='lg:col-span-7 relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-neutral-900'>
                                 <Image 
                                     src={breakingNews.image} 
@@ -55,10 +55,8 @@ const BlogPage = () => {
                                 />
                             </div>
                             <div className='lg:col-span-5 flex flex-col gap-4'>
-                                <div className='flex items-center gap-3 text-xs tracking-wider uppercase text-neutral-400'>
-                                    <span className='text-orange-500 font-semibold'>{breakingNews.category}</span>
-                                </div>
-                                <h2 className='text-2xl lg:text-3xl font-bold leading-tight text-white group-hover:text-orange-500 transition-colors duration-300'>
+                                <span className='text-orange-500 font-semibold text-xs tracking-wider uppercase'>{breakingNews.category}</span>
+                                <h2 className='text-xl lg:text-3xl font-bold leading-tight text-white group-hover:text-orange-500 transition-colors duration-300'>
                                     {breakingNews.title}
                                 </h2>
                                 <p className='text-neutral-400 text-sm leading-relaxed'>
@@ -71,8 +69,8 @@ const BlogPage = () => {
                         </Link>
                     )
                 }
-                <div className='flex lg:flex-col flex-row justify-between'>
-                    <div className='rounded-2xl p-6 flex-1'>
+                <div className='flex lg:flex-col flex-row gap-4 lg:gap-0 justify-between'>
+                    <div className='rounded-2xl py-6 lg:p-6 flex-1'>
                         <h3 className='font-bold text-xs uppercase tracking-widest text-neutral-400 mb-6 pb-2 flex items-center justify-between'>
                             <span>Trending Now</span>
                             <span className='w-1.5 h-1.5 bg-red-500 rounded-full animate-ping' />
@@ -109,7 +107,6 @@ const BlogPage = () => {
                                         <span className={`font-mono text-xs ${brand.status === 'up' ? 'text-emerald-500' : 'text-red-500'}`}>
                                             {brand.trend}
                                         </span>
-                                        {/* Indikator panah sederhana */}
                                         <span className={`text-[14px] ${brand.status === 'up' ? 'text-emerald-500' : 'text-red-500'}`}>
                                             {brand.status === 'up' ? <MdArrowDropUp/> : <MdArrowDropDown/>}
                                         </span>

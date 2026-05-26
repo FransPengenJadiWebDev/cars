@@ -21,18 +21,18 @@ export default async function CarDetailPage({ params }: Props) {
   }
 
   return (
-    <div className="text-white px-5">
-      <h1 className="lg:text-[32px] text-[25px] py-8 font-semibold">{car.brand} {car.name}</h1>
+    <div className="text-white px-4 lg:px-5">
+      <h1 className="lg:text-[32px] text-[20px] py-4 lg:py-8 font-semibold">{car.brand} {car.name}</h1>
       <div className="flex lg:flex-row flex-col h-full gap-5">
         <div className="flex-9">
           <CarCarousel images={car.images}/>
         </div>
-        <div className="flex-3 mt-7 lg:mt-0">
+        <div className="flex-3">
           <SpecsCard car={car}/>
         </div>
       </div>
-      <div className="bg-orange-500/70 my-8 py-3 text-center rounded-3xl">
-        <p className="font-semibold text-[20px]">Description</p>
+      <div className="bg-orange-500/80 my-8 py-1 lg:py-3 text-center rounded-3xl">
+        <p className="font-semibold text-lg lg:text-[20px]">Description</p>
       </div>
       <CarDescCard car={car}/>
     </div>

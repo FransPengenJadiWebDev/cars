@@ -23,7 +23,7 @@ const BlogCard = ({post} : Props) => {
                 className='object-cover group-hover:scale-105 transition-all duration-700'
             />
         </div>
-        <div className='p-5 flex flex-col flex-1 gap-3'>
+        <div className='p-5 flex flex-col gap-3'>
             <div className='flex items-center gap-2 text-[10px] tracking-wider uppercase text-neutral-500'>
                 <span className='text-orange-500 font-semibold'>{post.category}</span>
                 <span>•</span>

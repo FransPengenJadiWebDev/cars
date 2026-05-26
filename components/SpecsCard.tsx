@@ -10,7 +10,7 @@ type Props = {
 
 const SpecsCard = ({car} : Props) => {
   return (
-    <div className='flex flex-col gap-1 mt-18 lg:mt-0'>
+    <div className='flex flex-col gap-1'>
       <div className='bg-black rounded-xl px-5 py-7 h-[600px]'>
           <div className='flex flex-row justify-between items-center'>
               <p className='text-[12px] text-white/60 font-semibold'>PRICE</p>
@@ -58,21 +58,21 @@ const SpecsCard = ({car} : Props) => {
               <p className='text-[11px] text-white/60 font-semibold'>Engine</p>
             </div>
             <div className='flex flex-col gap-1'>
-              <div className='flex flex-row gap-5 items-center'>
+              <div className='flex flex-row gap-7 items-center'>
                 <p className='flex-1'>{car.spec.transmision}</p>
                 <p className='flex-1'>{car.spec.body}</p>
               </div>
-              <div className='flex flex-row gap-5'>
+              <div className='flex flex-row gap-7'>
                 <p className='flex-1 text-[11px] text-white/60 font-semibold'>Transmision</p>
                 <p className='flex-1 text-[11px] text-white/60 font-semibold'>Body</p>
               </div>
             </div>
             <div className='flex flex-col gap-1'>
-              <div className='flex flex-row gap-5 items-center'>
+              <div className='flex flex-row gap-7 items-center'>
                 <p className='flex-1'>{car.spec.exterior}</p>
                 <p className='flex-1'>{car.spec.interior}</p>
               </div>
-              <div className='flex flex-row gap-5'>
+              <div className='flex flex-row gap-7'>
                 <p className='flex-1 text-[11px] text-white/60 font-semibold'>Exterior</p>
                 <p className='flex-1 text-[11px] text-white/60 font-semibold'>Interior</p>
               </div>

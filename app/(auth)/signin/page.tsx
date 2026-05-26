@@ -129,7 +129,6 @@ const SignInPage = () => {
               </div>
             </div>
 
-            {/* SOCIAL LOGIN */}
             <div className="grid grid-cols-2 gap-4">
               <button className="flex items-center justify-center gap-3 bg-neutral-900 border border-neutral-800 rounded-xl py-3 hover:bg-neutral-800 transition-colors group">
                 <FcGoogle className="text-xl" />

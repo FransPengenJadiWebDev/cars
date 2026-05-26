@@ -2,7 +2,7 @@
 
 import CarsCard from './CarsCard'
 import { CarsCardProps } from '@/types/car'
-import { button } from 'framer-motion/client';
+import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
@@ -13,7 +13,6 @@ interface Props {
     selectedCategory: string | null;
     selectedStatus: string | null;
     selectedPrice: string | null;
-    search: string;
 }
 
 const matchPriceRange = (carPrice: number, selectedRange: string | null): boolean => {
@@ -49,9 +48,11 @@ const matchOdoRange = (carOdo: number, selectedStatus: string | null): boolean =
     }
 }
 
-const FeaturedCar = ({initialCars, selectedBrand, selectedCategory, selectedStatus, selectedPrice, search} : Props) => {
+const FeaturedCar = ({initialCars, selectedBrand, selectedCategory, selectedStatus, selectedPrice} : Props) => {
 
     const [currentIndex, setCurrentIndex] = useState(0)
+    const searchParams = useSearchParams()
+    const search = searchParams.get('search')
 
     const selectedCars = initialCars.filter((car) => {
         const matchBrand = selectedBrand ? car.brand.toLowerCase() === selectedBrand.toLowerCase() : true;
@@ -59,7 +60,7 @@ const FeaturedCar = ({initialCars, selectedBrand, selectedCategory, selectedStat
         const matchStatus = matchOdoRange(car.odo, selectedStatus);
         const matchPrice = matchPriceRange(car.price, selectedPrice);
         const CarBrandnName = `${car.brand} ${car.name}`
-        const matchSearch = CarBrandnName.toLowerCase().includes(search.toLowerCase())
+        const matchSearch = CarBrandnName.toLowerCase().includes((search || '').toLowerCase())
         return matchBrand && matchCategory && matchStatus && matchPrice && matchSearch;
     })
 
@@ -113,7 +114,7 @@ const FeaturedCar = ({initialCars, selectedBrand, selectedCategory, selectedStat
                 </div>
 
             {selectedCars.length > 0 ? (
-                <>
+                <div className='overflow-hidden lg:hidden'>
                     <div className='flex lg:hidden justify-center'>
                         <CarsCard car={selectedCars[currentIndex]}/>
                     </div>
@@ -141,7 +142,7 @@ const FeaturedCar = ({initialCars, selectedBrand, selectedCategory, selectedStat
                             />
                         ))}
                     </div>
-                </>
+                </div>
                 
             ) : (
                 <div className="flex flex-col items-center justify-center py-20 border border-dashed border-neutral-800 rounded-2xl">

@@ -14,10 +14,9 @@ interface Props {
   selectedCategory: string | null;
   selectedStatus: string | null;
   selectedPrice: string | null;
-  search: string;
 }
 
-const CarContainer = ({initialCars, selectedCategory, selectedStatus, selectedPrice, search} : Props) => {
+const CarContainer = ({initialCars, selectedCategory, selectedStatus, selectedPrice} : Props) => {
 
     const [selectedBrand, setSelectedBrand] = useState<string | null>(null)
     const searchParams = useSearchParams()
@@ -35,7 +34,6 @@ const CarContainer = ({initialCars, selectedCategory, selectedStatus, selectedPr
                 selectedCategory={selectedCategory}
                 selectedStatus={selectedStatus}
                 selectedPrice={selectedPrice}
-                search={search}
             />
         </>
     )

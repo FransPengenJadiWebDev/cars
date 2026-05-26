@@ -14,7 +14,7 @@ const CarBrand = ({onSelectedBrand, selectedBrand} : Props) => {
   const displayedBrand = selectedBrand ? BRANDS_DATA.filter(brand => brand.car_brand === selectedBrand) : BRANDS_DATA.slice(0, 6)
   
   return (
-    <div className='w-full mb-25 mt-10'>
+    <div className='w-full mb-15 lg:mb-25 mt-10'>
       <div className='mb-5 flex flex-row justify-between items-center'>
           <span className='text-white text-[px] lg:text-[25px] font-semibold tracking-wider uppercase'>Premium Brands</span>
           <Link href="/brands" className='hidden lg:flex flex-row gap-2 items-center text-white/50 hover:text-orange-500 transition-colors duration-300 text-sm tracking-wider'>

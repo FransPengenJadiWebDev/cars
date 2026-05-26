@@ -16,7 +16,6 @@ export default function HomeClient({cars} : Props) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedStatus, setSelectedStatus] = useState<string | null>(null)
   const [selectedPrice, setSelectedPrice] = useState<string | null>(null)
-  const [search, setSearch] = useState('')
   const searchParams = useSearchParams()
   const brand = searchParams.get('brand')
   console.log(brand)
@@ -30,8 +29,6 @@ export default function HomeClient({cars} : Props) {
             setSelectedStatus={setSelectedStatus}
             selectedPrice={selectedPrice}
             setSelectedPrice={setSelectedPrice}
-            search={search}
-            setSearch={setSearch}
         />
         <div className="px-5 lg:px-7">
             <CarContainer
@@ -39,7 +36,6 @@ export default function HomeClient({cars} : Props) {
                 selectedCategory={selectedCategory}
                 selectedStatus={selectedStatus}
                 selectedPrice={selectedPrice}
-                search={search}
             />
             <HomeNews/>
         </div>

@@ -13,11 +13,9 @@ interface Props {
   setSelectedStatus: (value: string | null) => void;
   selectedPrice: string | null;
   setSelectedPrice: (value: string | null) => void;
-  search: string;
-  setSearch: (value: string) => void;
 }
 
-const Hero = ( {selectedCategory, setSelectedCategory, selectedStatus, setSelectedStatus, selectedPrice, setSelectedPrice, search, setSearch} : Props) => {
+const Hero = ( {selectedCategory, setSelectedCategory, selectedStatus, setSelectedStatus, selectedPrice, setSelectedPrice} : Props) => {
 
   const categoryOptions = ["Hypercar", "Supercar", "Luxury SUV", "Track Only"]
   const statusOptions = ["Brand New", "Delivery Mileage", "Certified Pre-Owned"]
@@ -114,7 +112,7 @@ const Hero = ( {selectedCategory, setSelectedCategory, selectedStatus, setSelect
             </div>
 
             <div className="flex-initial">
-              <SearchBar search={search} setSearch={setSearch}/>
+              <SearchBar/>
             </div>
 
           </div>

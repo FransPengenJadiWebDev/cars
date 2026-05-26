@@ -16,8 +16,8 @@ const CarBrand = ({onSelectedBrand, selectedBrand} : Props) => {
   return (
     <div className='w-full mb-25 mt-10'>
       <div className='mb-5 flex flex-row justify-between items-center'>
-          <span className='text-white text-[25px] font-semibold tracking-wider uppercase'>Premium Brands</span>
-          <Link href="/brands" className='flex flex-row gap-2 items-center text-white/50 hover:text-orange-500 transition-colors duration-300 text-sm tracking-wider'>
+          <span className='text-white text-[px] lg:text-[25px] font-semibold tracking-wider uppercase'>Premium Brands</span>
+          <Link href="/brands" className='hidden lg:flex flex-row gap-2 items-center text-white/50 hover:text-orange-500 transition-colors duration-300 text-sm tracking-wider'>
               <span>Show All Brands</span>
               <GoArrowRight/>
           </Link>
@@ -37,6 +37,10 @@ const CarBrand = ({onSelectedBrand, selectedBrand} : Props) => {
             )
           })}
       </div>
+      <Link href="/brands" className='lg:hidden justify-center flex flex-row gap-2 mt-10 items-center text-white/50 hover:text-orange-500 transition-colors duration-300 text-sm tracking-wider'>
+        <span>Show All Brands</span>
+        <GoArrowRight/>
+      </Link>
     </div>
     
   )

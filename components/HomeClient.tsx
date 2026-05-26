@@ -33,7 +33,7 @@ export default function HomeClient({cars} : Props) {
             search={search}
             setSearch={setSearch}
         />
-        <div className="px-7">
+        <div className="px-5 lg:px-7">
             <CarContainer
                 initialCars={cars}
                 selectedCategory={selectedCategory}

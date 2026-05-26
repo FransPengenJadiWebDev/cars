@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
-import { div } from "framer-motion/client";
 
 const CarCarousel = ({ images }: { images: string[] }) => {
     const [currentIndex,setCurrentIndex] = useState(0);

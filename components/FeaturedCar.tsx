@@ -1,8 +1,11 @@
 'use client'
 
-import React from 'react'
 import CarsCard from './CarsCard'
 import { CarsCardProps } from '@/types/car'
+import { button } from 'framer-motion/client';
+import { useEffect, useState } from 'react'
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+
 
 interface Props {
     initialCars: CarsCardProps[];
@@ -48,6 +51,7 @@ const matchOdoRange = (carOdo: number, selectedStatus: string | null): boolean =
 
 const FeaturedCar = ({initialCars, selectedBrand, selectedCategory, selectedStatus, selectedPrice, search} : Props) => {
 
+    const [currentIndex, setCurrentIndex] = useState(0)
 
     const selectedCars = initialCars.filter((car) => {
         const matchBrand = selectedBrand ? car.brand.toLowerCase() === selectedBrand.toLowerCase() : true;
@@ -59,28 +63,86 @@ const FeaturedCar = ({initialCars, selectedBrand, selectedCategory, selectedStat
         return matchBrand && matchCategory && matchStatus && matchPrice && matchSearch;
     })
 
+    useEffect(() => {
+        setCurrentIndex(0)
+    }, [selectedBrand, selectedCategory, selectedStatus, selectedPrice, search])
+
+    const prevSlide = () => {
+        if (selectedCars.length === 0) return
+        const isFirstSlide = currentIndex === 0
+        const newIndex = isFirstSlide ? selectedCars.length-1 : currentIndex-1
+        setCurrentIndex(newIndex)
+    }
+
+    const nextSlide = () => {
+        if (selectedCars.length === 0) return
+        const isLastSlide = currentIndex === selectedCars.length-1
+        const newIndex = isLastSlide ? 0 : currentIndex+1
+        setCurrentIndex(newIndex)
+    }
+
     const hasActiveFilter = selectedBrand || selectedCategory || selectedStatus || selectedPrice;
 
     return (
-        <div className='relative min-h-[400px] mb-25'>
+        <div className='relative min-h-[400px] mb-15 lg:mb-25'>
             <div className="flex justify-between items-center mt-10 mb-5">
-                <h2 className="text-white text-[25px] font-semibold tracking-wider uppercase">{selectedBrand ? `${selectedBrand}'s Collection` : 'Featured Cars'}</h2>
+                <h2 className="text-white text-[18px] lg:text-[25px] font-semibold tracking-wider uppercase">{selectedBrand ? `${selectedBrand}'s Collection` : 'Featured Cars'}</h2>
                 {hasActiveFilter && (
                     <span className="text-neutral-500 text-sm">
                         Showing {selectedCars.length} results
                     </span>
                 )}
-            </div>
+            
+
+            {selectedCars.length > 1 && (
+                <div className="flex lg:hidden gap-2">
+                    <button 
+                        onClick={prevSlide}
+                        className="bg-none text-white p-2 rounded-full hover:bg-neutral-900 transition"
+                    >
+                        <MdChevronLeft/>
+                    </button>
+                    <button 
+                        onClick={nextSlide}
+                        className="bg-none text-white p-2 rounded-full hover:bg-neutral-900 transition"
+                    >
+                        <MdChevronRight/>
+                    </button>
+                </div>
+                )}
+                </div>
 
             {selectedCars.length > 0 ? (
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-                    {selectedCars.map((car) => (
-                        <CarsCard 
-                            key={car.id} 
-                            car={car}
-                        />
-                    ))}
-                </div>
+                <>
+                    <div className='flex lg:hidden justify-center'>
+                        <CarsCard car={selectedCars[currentIndex]}/>
+                    </div>
+                    <div className='lg:hidden flex justify-center mt-6 gap-4'>
+                        {selectedCars.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setCurrentIndex(index)}
+                                className={`w-2.5 h-2.5 rounded-full transition-all ${
+                                    currentIndex === index
+                                        ? 'bg-white w-6'
+                                        : 'bg-neutral-600'
+                                }`}
+                            />
+                        ))}
+                        
+                        
+                    </div>
+
+                    <div className="hidden lg:grid grid-cols-4 gap-12">
+                        {selectedCars.map((car) => (
+                            <CarsCard 
+                                key={car.id} 
+                                car={car}
+                            />
+                        ))}
+                    </div>
+                </>
+                
             ) : (
                 <div className="flex flex-col items-center justify-center py-20 border border-dashed border-neutral-800 rounded-2xl">
                     <p className="text-neutral-500 tracking-widest uppercase text-sm">

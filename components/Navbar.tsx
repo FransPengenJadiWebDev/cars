@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`z-20 fixed top-0 text-white flex w-full justify-between lg:px-20 py-4 px-10 ${navBg}`}>
+      <nav className={`z-20 fixed top-0 text-white flex w-full justify-between lg:px-20 py-4 px-5 lg:px-10 ${navBg}`}>
         <div className='flex-1 flex justify-start'>
           <Link href='/' className='font-bold text-[20px]'>
             <h1 className="text-2xl font-bold italic tracking-tighter">LUX<span className="text-orange-500">DRIVE</span></h1>

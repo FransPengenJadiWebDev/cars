@@ -58,7 +58,7 @@ const Hero = ( {selectedCategory, setSelectedCategory, selectedStatus, setSelect
       <div className='bg-black/40 absolute inset-0'></div>
       <div className='  h-full flex flex-col z-10 items-center w-[97%] justify-center'>
         <motion.h1
-          className='text-white tracking-wide font-bold text-[35px] mb-2 flex'
+          className='text-white tracking-wide font-bold text-[20px] lg:text-[35px] mb-2 flex'
           variants={container}
           initial="hidden"
           animate="visible"
@@ -70,7 +70,7 @@ const Hero = ( {selectedCategory, setSelectedCategory, selectedStatus, setSelect
           ))}
         </motion.h1>
         <motion.h4
-          className="text-orange-500 tracking-wider font-semibold text-[16px] mb-10 flex"
+          className="text-orange-500 tracking-wider font-semibold text-[12px] lg:text-[16px] mb-10 flex"
           variants={container}
           initial="hidden"
           animate="visible"
@@ -84,7 +84,6 @@ const Hero = ( {selectedCategory, setSelectedCategory, selectedStatus, setSelect
         <div className="bg-neutral-800/90 border border-black p-1.5 w-220 rounded-full hidden lg:flex">
           <div className="flex flex-row text-white items-center justify-between w-full pl-4">
             
-
             <div className="flex-1 border-r border-neutral-800/80 px-4">
               <Dropdown 
                 title="Category" 

@@ -30,7 +30,7 @@ const BlogPage = () => {
     const breakingNews = NEWS_ITEMS.find(post => post.isBreaking)
 
     return (
-        <div className='px-7 w-full mt-32 mb-40 text-white max-w-7xl mx-auto'>
+        <div className='px-4 w-full mt-32 mb-40 text-white max-w-7xl mx-auto'>
 
             <div className='mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6'>
                 <div className='mb-12 flex flex-col gap-2'>
@@ -45,7 +45,7 @@ const BlogPage = () => {
             <div className='flex lg:flex-row flex-col mb-16 gap-5'>
                 {breakingNews && 
                     (
-                        <Link href={`/blog/${breakingNews.id}`} className='group flex flex-col gap-8  bg-neutral-900/20 border border-neutral-900 rounded-2xl p-6 hover:border-orange-500/20 transition-all duration-500'>
+                        <Link href={`/news`} className='group flex flex-col gap-8  bg-neutral-900/20 border border-neutral-900 rounded-2xl p-6 hover:border-orange-500/20 transition-all duration-500'>
                             <div className='lg:col-span-7 relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-neutral-900'>
                                 <Image 
                                     src={breakingNews.image} 
@@ -73,7 +73,7 @@ const BlogPage = () => {
                 }
                 <div className='flex lg:flex-col flex-row justify-between'>
                     <div className='rounded-2xl p-6 flex-1'>
-                        <h3 className='font-bold text-xs uppercase tracking-widest text-neutral-400 mb-6 pb-2 border-b border-neutral-900 flex items-center justify-between'>
+                        <h3 className='font-bold text-xs uppercase tracking-widest text-neutral-400 mb-6 pb-2 flex items-center justify-between'>
                             <span>Trending Now</span>
                             <span className='w-1.5 h-1.5 bg-red-500 rounded-full animate-ping' />
                         </h3>
@@ -94,9 +94,9 @@ const BlogPage = () => {
                         </div>
                     </div>
                     <hr className='border-gray-500 hidden lg:block'/>
-                    <div className='border border-neutral-900 rounded-2xl p-6 flex-1'>
-                        <h3 className='font-bold text-xs uppercase tracking-widest mb-6 pb-2 border-b border-neutral-900 flex items-center justify-between'>
-                            <span className='text-neutral-400'>Market Pulse</span>
+                    <div className='rounded-2xl py-6 lg:p-6 flex-1'>
+                        <h3 className='font-bold text-xs uppercase tracking-widest mb-6 pb-2 flex items-center justify-between'>
+                            <span className='text-neutral-400 truncate w-20 lg:w-full'>Market Pulse</span>
                             <span className='text-[10px] text-red-500'>Live</span>
                         </h3>
                         <div className='flex flex-col gap-4'>

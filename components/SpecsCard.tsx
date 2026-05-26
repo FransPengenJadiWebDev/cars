@@ -11,7 +11,7 @@ type Props = {
 const SpecsCard = ({car} : Props) => {
   return (
     <div className='flex flex-col gap-1'>
-      <div className='bg-black rounded-xl px-5 py-7 h-[600px]'>
+      <div className='bg-black rounded-xl px-5 py-7 lg:h-[600px]'>
           <div className='flex flex-row justify-between items-center'>
               <p className='text-[12px] text-white/60 font-semibold'>PRICE</p>
               <p className='text-[17px]'>{formatPrice(car.price)}</p>

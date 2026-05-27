@@ -21,6 +21,9 @@ const CarCarousel = ({ images }: { images: string[] }) => {
 
     return (
         <div className="relative w-full lg:h-[600px] h-[300px]">
+            <div>
+                
+            </div>
             <div className="aspect-video lg:aspect-auto lg:h-150 rounded-xl bg-center bg-cover duration-500 relative overflow-hidden">
                 <Image 
                     src={images[currentIndex]} 
@@ -29,13 +32,13 @@ const CarCarousel = ({ images }: { images: string[] }) => {
                     className="object-cover"
                 />
             </div>
-            <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2  text-white cursor-pointer">
+            <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] left-2 lg:left-5 text-2xl rounded-full p-2  text-white cursor-pointer">
                 <MdChevronLeft 
                     onClick={prevSlide} 
                     size={30} 
                 />
             </div>
-            <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2  text-white cursor-pointer">
+            <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] right-2 lg:right-5 text-2xl rounded-full p-2  text-white cursor-pointer">
                 <MdChevronRight 
                     onClick={nextSlide} 
                     size={30} 

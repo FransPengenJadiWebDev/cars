@@ -114,7 +114,7 @@ const FeaturedCar = ({initialCars, selectedBrand, selectedCategory, selectedStat
                 </div>
 
             {selectedCars.length > 0 ? (
-                <div className='overflow-hidden lg:hidden'>
+                <div>
                     <div className='flex lg:hidden justify-center'>
                         <CarsCard car={selectedCars[currentIndex]}/>
                     </div>

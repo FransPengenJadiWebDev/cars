@@ -4,7 +4,7 @@ import { GoArrowRight } from 'react-icons/go'
 import { NEWS_ITEMS } from '@/constants/blog_n_news'
 import NewsCard from './NewsCard'
 
-const HomeBlog = () => {
+const HomeNews = () => {
 
   return (
     <div className='w-full mb-25 mt-10'>
@@ -34,4 +34,4 @@ const HomeBlog = () => {
   )
 }
 
-export default HomeBlog
+export default HomeNews

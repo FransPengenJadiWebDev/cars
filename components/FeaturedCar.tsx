@@ -35,6 +35,7 @@ const matchPriceRange = (carPrice: number, selectedRange: string | null): boolea
 }
 
 const matchOdoRange = (carOdo: number, selectedStatus: string | null): boolean => {
+    
     if (!selectedStatus) return true;
     switch (selectedStatus) {
         case "Brand New" :
@@ -123,15 +124,9 @@ const FeaturedCar = ({initialCars, selectedBrand, selectedCategory, selectedStat
                             <button
                                 key={index}
                                 onClick={() => setCurrentIndex(index)}
-                                className={`w-2.5 h-2.5 rounded-full transition-all ${
-                                    currentIndex === index
-                                        ? 'bg-white w-6'
-                                        : 'bg-neutral-600'
-                                }`}
+                                className={`w-2.5 h-2.5 rounded-full transition-all ${currentIndex === index ? 'bg-white w-6' : 'bg-neutral-600'}`}
                             />
                         ))}
-                        
-                        
                     </div>
 
                     <div className="hidden lg:grid grid-cols-4 gap-12">

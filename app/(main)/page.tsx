@@ -6,12 +6,13 @@ import { Suspense } from "react";
 
 
 // async function getCars() : Promise<CarsCardProps[]> {
-  // const res = await fetch('http://localhost:3000/api/cars');
-  // return res.json();
-  // 
+//   const res = await fetch('http://localhost:3000/api/cars');
+//   return res.json();
+  
 // }
 
 export default async function Home() {
+  // const cars = await getCars()
   const cars = carsData as CarsCardProps[];
 
   return (

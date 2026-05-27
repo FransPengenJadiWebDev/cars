@@ -79,9 +79,9 @@ const Hero = ( {selectedCategory, setSelectedCategory, selectedStatus, setSelect
             </motion.span>
           ))}
         </motion.h4>
+
         <div className="bg-neutral-800/90 border border-black p-1.5 w-220 rounded-full hidden lg:flex">
           <div className="flex flex-row text-white items-center justify-between w-full pl-4">
-            
             <div className="flex-1 border-r border-neutral-800/80 px-4">
               <Dropdown 
                 title="Category" 
@@ -91,7 +91,6 @@ const Hero = ( {selectedCategory, setSelectedCategory, selectedStatus, setSelect
                 variants="py-1.5 px-3"
               />
             </div>
-
             <div className="flex-1 pr-4 pl-4">
               <Dropdown 
                 title="Certified" 
@@ -110,11 +109,9 @@ const Hero = ( {selectedCategory, setSelectedCategory, selectedStatus, setSelect
                 variants="py-1.5 px-3"
               />
             </div>
-
             <div className="flex-initial">
               <SearchBar/>
             </div>
-
           </div>
         </div>
       </div>

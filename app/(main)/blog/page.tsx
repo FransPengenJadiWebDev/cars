@@ -1,21 +1,18 @@
 'use client'
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { BLOG_POSTS } from '@/constants/blog_n_news'
 import BlogCard from '@/components/BlogCard'
-
+import { BsDot } from "react-icons/bs";
 
 const CATEGORIES = ["All Stories", "Deep Dive", "Review", "Culture", "Insight"]
 
 const BlogPage = () => {
+    
     const [activeCategory, setActiveCategory] = useState("All Stories")
-
-    const filteredPosts = activeCategory === "All Stories"
-        ? BLOG_POSTS
-        : BLOG_POSTS.filter(post => post.category === activeCategory)
-
+    const filteredPosts = activeCategory === "All Stories" ? BLOG_POSTS: BLOG_POSTS.filter(post => post.category === activeCategory)
     const featuredPost = BLOG_POSTS.find(post => post.featured)
     const regularPosts = filteredPosts.filter(post => activeCategory !== "All Stories" || !post.featured)
 
@@ -59,7 +56,7 @@ const BlogPage = () => {
                     <div className='lg:col-span-5 flex flex-col gap-4'>
                         <div className='flex items-center gap-3 text-xs tracking-wider uppercase text-neutral-400'>
                             <span className='text-orange-500 font-semibold'>{featuredPost.category}</span>
-                            <span>•</span>
+                            <BsDot size={23}/>
                             <span>{featuredPost.date}</span>
                         </div>
                         <h2 className='text-xl lg:text-3xl font-bold leading-tight text-white group-hover:text-orange-500 transition-colors duration-300'>

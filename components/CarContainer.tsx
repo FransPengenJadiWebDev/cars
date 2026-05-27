@@ -1,13 +1,11 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import FeaturedCar from './FeaturedCar'
 import CarBrand from './CarBrand'
 import { CarsCardProps } from '@/types/car'
 import { useState } from 'react'
 import { useSearchParams } from "next/navigation"
-import { GoArrowRight } from 'react-icons/go'
-import Link from 'next/link'
 
 interface Props {
   initialCars: CarsCardProps[];
@@ -27,7 +25,11 @@ const CarContainer = ({initialCars, selectedCategory, selectedStatus, selectedPr
     
     return (
         <>
-            <CarBrand onSelectedBrand={setSelectedBrand} selectedBrand={selectedBrand}/>
+            <CarBrand 
+                onSelectedBrand={setSelectedBrand} 
+                selectedBrand={selectedBrand}
+            />
+
             <FeaturedCar 
                 initialCars={initialCars} 
                 selectedBrand={selectedBrand}

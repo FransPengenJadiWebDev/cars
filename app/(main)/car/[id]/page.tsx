@@ -9,15 +9,17 @@ type Props = {
   params: Promise<{ id: string }>;
 };
 
-
-
 export default async function CarDetailPage({ params }: Props) {
-  const { id } = await params;
-  
+
+  const  { id } = await params;
   const car = cars.find((item: any) => item.id.toString() === id);
 
   if (!car) {
-    return <div className="text-white">Mobil tidak ditemukan</div>;
+    return <div className="h-80">
+        <span className="text-white">
+            Mobil tidak ditemukan
+        </span>
+      </div>;
   }
 
   return (

@@ -1,5 +1,6 @@
 'use client'
-import React, { useState, useRef, useEffect } from 'react'
+
+import { useState, useRef, useEffect } from 'react'
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 type DropdownProps = {
@@ -41,7 +42,7 @@ const Dropdown = ({ title, options, selectedValue, onSelect, variants }: Dropdow
                 </button>
 
                 {isOpen && (
-                    <div className="origin-top-left absolute left-0 mt-4 w-56 rounded-xl bg-neutral-950/90 backdrop-blur-md border border-neutral-800 p-1.5 shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="origin-top-left absolute left-0 mt-4 w-56 rounded-xl bg-neutral-950/90 backdrop-blur-md border border-neutral-800 p-1.5 shadow-xl/20 shadow-black z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                         <ul role="menu" className="space-y-0.5">
                             {options.map((option, index) => {
                                 const isCurrent = selectedValue === option;

@@ -1,6 +1,6 @@
+@config "../tailwindcss.config.ts";
 @import "tailwindcss";
 
-/* optional: tetap boleh punya custom style */
 :root {
   --background: #ffffff;
   --foreground: #171717;

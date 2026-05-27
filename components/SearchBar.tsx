@@ -15,15 +15,14 @@ const SearchBarA = () => {
   }, [searchParams])
 
   const handleSearch = (value: string) => {
-    setInputValue(value)
     
+    setInputValue(value)
     const params = new URLSearchParams(searchParams.toString())
     if (value) {
       params.set("search", value)
     } else {
       params.delete("search")
     }
-
     router.push(`/?${params.toString()}`, {scroll: false})
   }
 
@@ -38,7 +37,6 @@ const SearchBarA = () => {
       className="relative outline-none text-white placeholder:text-white"
     />
 </div>
-    
   )
 }
 

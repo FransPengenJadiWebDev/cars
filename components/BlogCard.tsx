@@ -1,7 +1,8 @@
-import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BlogPost } from '@/types/blognews'
+import { BsDot } from "react-icons/bs";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 type Props = {
     post: BlogPost
@@ -26,7 +27,7 @@ const BlogCard = ({post} : Props) => {
         <div className='p-5 flex flex-col gap-3'>
             <div className='flex items-center gap-2 text-[10px] tracking-wider uppercase text-neutral-500'>
                 <span className='text-orange-500 font-semibold'>{post.category}</span>
-                <span>•</span>
+                <BsDot size={23}/>
                 <span>{post.readTime}</span>
             </div>
             <h3 className='font-bold text-lg text-white group-hover:text-orange-500 transition-colors duration-300 line-clamp-2'>
@@ -37,7 +38,7 @@ const BlogCard = ({post} : Props) => {
             </p>
             <div className='mt-auto pt-4 border-t border-neutral-900 flex items-center justify-between text-[11px] uppercase tracking-widest text-neutral-400 group-hover:text-white'>
                 <span>{post.date}</span>
-                <span className='group-hover:translate-x-1 transition-transform'>→</span>
+                <HiOutlineArrowNarrowRight className='group-hover:translate-x-1 transition-transform'/>
             </div>
         </div>
     </Link>

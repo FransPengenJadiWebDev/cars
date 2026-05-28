@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from "react"
 import { useSearchParams } from "next/navigation"
 import Hero from "./Hero"
 import CarContainer from "./CarContainer"
@@ -13,9 +12,6 @@ interface Props {
 
 export default function HomeClient({cars} : Props) {
 
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
-  const [selectedStatus, setSelectedStatus] = useState<string | null>(null)
-  const [selectedPrice, setSelectedPrice] = useState<string | null>(null)
   const searchParams = useSearchParams()
   const brand = searchParams.get('brand')
   
@@ -25,12 +21,7 @@ export default function HomeClient({cars} : Props) {
     <>
         <Hero />
         <div className="px-5 lg:px-7">
-            <CarContainer
-                initialCars={cars}
-                selectedCategory={selectedCategory}
-                selectedStatus={selectedStatus}
-                selectedPrice={selectedPrice}
-            />
+            <CarContainer initialCars={cars}/>
             <HomeNews/>
         </div>
         

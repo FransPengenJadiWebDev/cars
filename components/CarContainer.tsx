@@ -9,12 +9,9 @@ import { useSearchParams } from "next/navigation"
 
 interface Props {
   initialCars: CarsCardProps[];
-  selectedCategory: string | null;
-  selectedStatus: string | null;
-  selectedPrice: string | null;
 }
 
-const CarContainer = ({initialCars, selectedCategory, selectedStatus, selectedPrice} : Props) => {
+const CarContainer = ({initialCars} : Props) => {
 
     const [selectedBrand, setSelectedBrand] = useState<string | null>(null)
     const searchParams = useSearchParams()
@@ -33,9 +30,6 @@ const CarContainer = ({initialCars, selectedCategory, selectedStatus, selectedPr
             <FeaturedCar 
                 initialCars={initialCars} 
                 selectedBrand={selectedBrand}
-                selectedCategory={selectedCategory}
-                selectedStatus={selectedStatus}
-                selectedPrice={selectedPrice}
             />
         </>
     )

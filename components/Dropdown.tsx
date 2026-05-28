@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation';
 import { MdKeyboardArrowDown } from "react-icons/md";
 
@@ -9,7 +9,7 @@ type DropdownProps = {
     options: string[];
 }
 
-const Dropdown = ({ title, options }: DropdownProps) => {
+const DropdownA = ({ title, options }: DropdownProps) => {
 
     const paramKey = title.toLocaleLowerCase()
     const router = useRouter()
@@ -86,4 +86,12 @@ const Dropdown = ({ title, options }: DropdownProps) => {
     )
 }
 
-export default Dropdown;
+export default function Dropdown({ title, options }: DropdownProps) {
+    return (
+        <Suspense fallback={<div className="opacity-50">Loading Search...</div>}>
+            <DropdownA title={title} options={options}/>
+        </Suspense>
+    )
+    
+}
+

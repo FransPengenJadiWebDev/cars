@@ -2,30 +2,10 @@
 
 import Dropdown from "./Dropdown"
 import SearchBar from "./SearchBar"
-import { useState } from "react";
-import { easeIn, motion } from "framer-motion";
-import { MdSearch } from "react-icons/md";
+import { motion } from "framer-motion";
+import { categoryOptions, statusOptions, priceOptions } from "@/constants/filters";
 
-interface Props {
-  selectedCategory: string | null;
-  setSelectedCategory: (value: string | null) => void;
-  selectedStatus: string | null;
-  setSelectedStatus: (value: string | null) => void;
-  selectedPrice: string | null;
-  setSelectedPrice: (value: string | null) => void;
-}
-
-const Hero = ( {selectedCategory, setSelectedCategory, selectedStatus, setSelectedStatus, selectedPrice, setSelectedPrice} : Props) => {
-
-  const categoryOptions = ["Hypercar", "Supercar", "Luxury SUV", "Track Only"]
-  const statusOptions = ["Brand New", "Delivery Mileage", "Certified Pre-Owned"]
-  const priceOptions = [
-    "Under $500K",
-    "$500K - $1M",
-    "$1M - $3M",
-    "$3M - $5M",
-    "$5M+"
-  ]
+const Hero = () => {
 
   const container = {
     hidden: {},
@@ -81,38 +61,29 @@ const Hero = ( {selectedCategory, setSelectedCategory, selectedStatus, setSelect
         </motion.h4>
 
         <div className="bg-neutral-800/90 border border-black p-1.5 w-220 rounded-full hidden lg:flex">
-          <div className="flex flex-row text-white items-center justify-between w-full pl-4">
-            <div className="flex-1 border-r border-neutral-800/80 px-4">
+          <ul className="flex flex-row text-white items-center justify-between w-full pl-4">
+            <li className="flex-1 px-4">
               <Dropdown 
                 title="Category" 
                 options={categoryOptions}
-                selectedValue={selectedCategory}
-                onSelect={setSelectedCategory}
-                variants="py-1.5 px-3"
               />
-            </div>
-            <div className="flex-1 pr-4 pl-4">
+            </li>
+            <li className="flex-1 px-4">
               <Dropdown 
                 title="Certified" 
                 options={statusOptions}
-                selectedValue={selectedStatus}
-                onSelect={setSelectedStatus}
-                variants="py-1.5 px-3"
               />
-            </div>
-            <div className="flex-1 pr-4 pl-4">
+            </li>
+            <li className="flex-1 px-4">
               <Dropdown 
                 title="Price" 
                 options={priceOptions}
-                selectedValue={selectedPrice}
-                onSelect={setSelectedPrice}
-                variants="py-1.5 px-3"
               />
-            </div>
+            </li>
             <div className="flex-initial">
               <SearchBar/>
             </div>
-          </div>
+          </ul>
         </div>
       </div>
       

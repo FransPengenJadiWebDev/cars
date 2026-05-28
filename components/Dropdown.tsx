@@ -1,19 +1,36 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import { useSearchParams, useRouter } from 'next/navigation';
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 type DropdownProps = {
     title: string;
     options: string[];
-    selectedValue: string | null;
-    onSelect: (value: string) => void;
-    variants?: string;
 }
 
-const Dropdown = ({ title, options, selectedValue, onSelect, variants }: DropdownProps) => {
+const Dropdown = ({ title, options }: DropdownProps) => {
+
+    const paramKey = title.toLocaleLowerCase()
+    const router = useRouter()
+    const searchParams = useSearchParams();
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
+    const selectedValue = searchParams.get(paramKey) || ''
+
+    const handleFilter = (option: string) => {
+        const isCurrent = selectedValue === option
+        const currentParams = new URLSearchParams(searchParams.toString())
+
+        if (isCurrent) {
+            currentParams.delete(paramKey)
+        } else {
+            currentParams.set(paramKey, option)
+        }
+
+        router.push(`/?${currentParams.toString()}`, {scroll: false})
+        setIsOpen(false)
+    }
 
     const toggleDropdown = () => setIsOpen(!isOpen);
 
@@ -32,7 +49,7 @@ const Dropdown = ({ title, options, selectedValue, onSelect, variants }: Dropdow
             <div className="relative w-full inline-block text-left">
                 <button
                     type="button"
-                    className={`${variants} w-full text-left text-sm tracking-wide text-neutral-300 hover:text-white flex items-center gap-2 transition-colors duration-200 focus:outline-none`}
+                    className='py-1.5 lg:px-3 w-full text-left text-sm tracking-wide text-neutral-300 hover:text-white flex items-center gap-2 transition-colors duration-200 focus:outline-none'
                     onClick={toggleDropdown}
                 >
                     <span className="truncate">
@@ -54,11 +71,7 @@ const Dropdown = ({ title, options, selectedValue, onSelect, variants }: Dropdow
                                                 ${isCurrent 
                                                     ? 'bg-orange-500/10 text-orange-500 font-semibold' 
                                                     : 'text-neutral-400 hover:bg-neutral-900 hover:text-white'}`}
-                                            onClick={() => {
-                                                onSelect(option);
-                                                setIsOpen(false);
-                                                {isCurrent && onSelect('')}
-                                            }}
+                                            onClick = {() => handleFilter(option)}
                                         >
                                             {option}
                                         </button>

@@ -4,6 +4,7 @@ import { useSession, signOut } from 'next-auth/react';
 import Link from "next/link"
 import Dropdown from "./Dropdown"
 import { PiSignOutBold } from "react-icons/pi"
+import { categoryOptions, statusOptions, priceOptions } from "@/constants/filters";
 
 const TRENDING_NOW = [
   { id: "01", title: "Bugatti V16 Hybrid production slots entirely sold out", reads: "14K READS" },
@@ -36,15 +37,17 @@ const Sidebar = ({ isOpen, onClose,  }: any) => {
           />
         </div>
 
+        <h1 className="uppercase italic font-bold text-xl">Lux<span className="text-orange-500">Drive</span></h1>
+
+        <hr className="my-6 border-b border-neutral-900"/>
+
         <div className="mb-6">
           <SearchBar/>
         </div>
         
-        <div className="my-6 border-b border-neutral-900"></div>
-
         <div className="flex flex-col gap-3">
           <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold">Pages</span>
-          <ul className='flex flex-col gap-1 text-base text-neutral-200 font-medium'>
+          <ul className='flex flex-col gap-1 text-sm tracking-wide text-neutral-200'>
             <li className="hover:text-orange-500 py-1.5 transition-colors">
               <Link href='/blog' onClick={onClose}>Blog</Link>
             </li>
@@ -60,22 +63,33 @@ const Sidebar = ({ isOpen, onClose,  }: any) => {
           </ul>
         </div>
 
-        <div className="my-6 border-b border-neutral-900"></div>
-          {status === "authenticated" ? (
-            <div className="flex flex-col justify-center gap-4">
-              <span className="text-xs font-mono text-orange-500">[ {session.user?.name} ]</span>
-              <button onClick={() => signOut()} className="flex flex-row items-center gap-1 text-xs uppercase tracking-wider text-neutral-400 hover:text-white">
-                <PiSignOutBold/>
-                <span>Sign Out</span>
-              </button>
-            </div>
-          ) : (
-            <Link href="/signin" className='flex flex-row gap-3 uppercase text-xs tracking-wider items-center cursor-pointer hover:text-orange-500'>
-              <MdPerson className=''/>
-              <span>Sign In</span>
-            </Link>
-          )}
-        <div className="my-6 border-b border-neutral-900"></div>
+        <hr className="my-6 border-b border-neutral-900"/>
+
+        <div className="flex flex-col gap-3">
+          <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold">Filters</span>
+          <ul className="flex flex-col gap-1">
+              <li className="flex-1">
+                <Dropdown 
+                  title="Category" 
+                  options={categoryOptions}
+                />
+              </li>
+              <li className="flex-1">
+                <Dropdown 
+                  title="Certified" 
+                  options={statusOptions}
+                />
+              </li>
+              <li className="flex-1">
+                <Dropdown 
+                  title="Price" 
+                  options={priceOptions}
+                />
+              </li>
+            </ul>
+        </div>
+        
+        <hr className="my-6 border-b border-neutral-900"/>
 
         <div className="flex flex-col gap-4">
           <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold">Trending Now</span>
@@ -98,7 +112,7 @@ const Sidebar = ({ isOpen, onClose,  }: any) => {
           </div>
         </div>
 
-        <div className="my-6 border-b border-neutral-900"></div>
+        <hr className="my-6 border-b border-neutral-900"/>
 
         <div className="bg-neutral-900/40 border border-neutral-900 rounded-xl p-4 flex flex-col gap-3">
           <div>
@@ -118,6 +132,23 @@ const Sidebar = ({ isOpen, onClose,  }: any) => {
             </button>
           </div>
         </div>
+
+        <hr className="my-6 border-b border-neutral-900"/>
+
+        {status === "authenticated" ? (
+          <div className="flex flex-col justify-center gap-4">
+            <span className="text-xs font-mono text-orange-500">[ {session.user?.name} ]</span>
+            <button onClick={() => signOut()} className="flex flex-row items-center gap-1 text-xs uppercase tracking-wider text-neutral-400 hover:text-white">
+              <PiSignOutBold/>
+              <span>Sign Out</span>
+            </button>
+          </div>
+        ) : (
+          <Link href="/signin" className='flex flex-row gap-3 uppercase text-xs tracking-wider items-center cursor-pointer hover:text-orange-500'>
+            <MdPerson className=''/>
+            <span>Sign In</span>
+          </Link>
+        )}
 
       </div>
     </>

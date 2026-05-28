@@ -18,18 +18,12 @@ export default function HomeClient({cars} : Props) {
   const [selectedPrice, setSelectedPrice] = useState<string | null>(null)
   const searchParams = useSearchParams()
   const brand = searchParams.get('brand')
+  
   console.log(brand)
 
   return (
     <>
-        <Hero 
-            selectedCategory={selectedCategory}
-            setSelectedCategory={setSelectedCategory}
-            selectedStatus={selectedStatus}
-            setSelectedStatus={setSelectedStatus}
-            selectedPrice={selectedPrice}
-            setSelectedPrice={setSelectedPrice}
-        />
+        <Hero />
         <div className="px-5 lg:px-7">
             <CarContainer
                 initialCars={cars}

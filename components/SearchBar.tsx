@@ -27,7 +27,7 @@ const SearchBarA = () => {
   }
 
   return (
-    <div className= 'flex gap-3 items-center rounded-4xl px-3 py-2 text-[16px] bg-orange-500'>
+    <div className= 'flex gap-3 items-center rounded-4xl px-3 py-2 text-sm lg:text-[16px] bg-orange-500'>
     <MdSearch className=" pointer-events-none"/>
     <input 
       type="text" 
@@ -36,7 +36,7 @@ const SearchBarA = () => {
       onChange={(e) => handleSearch(e.target.value)} 
       className="relative outline-none text-white placeholder:text-white"
     />
-</div>
+    </div>
   )
 }
 

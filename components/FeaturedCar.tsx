@@ -6,13 +6,9 @@ import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
-
 interface Props {
     initialCars: CarsCardProps[];
     selectedBrand: string | null;
-    selectedCategory: string | null;
-    selectedStatus: string | null;
-    selectedPrice: string | null;
 }
 
 const matchPriceRange = (carPrice: number, selectedRange: string | null): boolean => {
@@ -49,17 +45,20 @@ const matchOdoRange = (carOdo: number, selectedStatus: string | null): boolean =
     }
 }
 
-const FeaturedCar = ({initialCars, selectedBrand, selectedCategory, selectedStatus, selectedPrice} : Props) => {
+const FeaturedCar = ({initialCars, selectedBrand} : Props) => {
 
     const [currentIndex, setCurrentIndex] = useState(0)
     const searchParams = useSearchParams()
     const search = searchParams.get('search')
+    const category = searchParams.get('category')
+    const certified = searchParams.get('certified')
+    const price = searchParams.get('price')
 
     const selectedCars = initialCars.filter((car) => {
         const matchBrand = selectedBrand ? car.brand.toLowerCase() === selectedBrand.toLowerCase() : true;
-        const matchCategory = selectedCategory ? car.category.toLowerCase() === selectedCategory.toLowerCase() : true;
-        const matchStatus = matchOdoRange(car.odo, selectedStatus);
-        const matchPrice = matchPriceRange(car.price, selectedPrice);
+        const matchCategory = category ? car.category.toLowerCase() === category.toLowerCase() : true;
+        const matchStatus = matchOdoRange(car.odo, certified);
+        const matchPrice = matchPriceRange(car.price, price);
         const CarBrandnName = `${car.brand} ${car.name}`
         const matchSearch = CarBrandnName.toLowerCase().includes((search || '').toLowerCase())
         return matchBrand && matchCategory && matchStatus && matchPrice && matchSearch;
@@ -67,7 +66,7 @@ const FeaturedCar = ({initialCars, selectedBrand, selectedCategory, selectedStat
 
     useEffect(() => {
         setCurrentIndex(0)
-    }, [selectedBrand, selectedCategory, selectedStatus, selectedPrice, search])
+    }, [selectedBrand, category, certified, price, search])
 
     const prevSlide = () => {
         if (selectedCars.length === 0) return
@@ -83,7 +82,7 @@ const FeaturedCar = ({initialCars, selectedBrand, selectedCategory, selectedStat
         setCurrentIndex(newIndex)
     }
 
-    const hasActiveFilter = selectedBrand || selectedCategory || selectedStatus || selectedPrice;
+    const hasActiveFilter = selectedBrand || category || certified || price;
 
     return (
         <div className='relative min-h-[400px] mb-15 lg:mb-25'>

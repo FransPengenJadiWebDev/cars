@@ -14,7 +14,7 @@ const NewsCard = ({post, layout} : Props) => {
     <Link 
         href='/news'
         key={post.id} 
-        className={`lg:h-full ${layout} group flex ${layout === 'flex-col' ? 'h-[350px]' : 'h-full'} bg-neutral-950 border border-neutral-900 rounded-xl overflow-hidden hover:border-orange-500/20 transition-all duration-300`}
+        className={`${layout} group flex ${layout === 'flex-col' ? 'h-[350px] lg:h-[400px]' : 'h-full'} bg-neutral-950 border border-neutral-900 rounded-xl overflow-hidden hover:border-orange-500/20 transition-all duration-300`}
     >
         <div className={`${layout === 'flex-row' ? 'flex-4 lg:flex-1' : 'flex-1'} relative lg:w-full  bg-neutral-900`}>
             <Image src={post.image} alt={post.title} fill className='object-cover group-hover:scale-105 transition-all duration-700'/>
